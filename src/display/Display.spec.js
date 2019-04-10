@@ -6,8 +6,8 @@
 // when unlocked or open use the green-led class
 import React from 'react';
 import * as rt from 'react-testing-library';
-import Display from './Display';
 import 'jest-dom/extend-expect';
+import Display from './Display';
 
 afterEach(rt.cleanup);
 

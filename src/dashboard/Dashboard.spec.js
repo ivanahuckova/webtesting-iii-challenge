@@ -4,6 +4,7 @@
 
 import React from 'react';
 import * as rt from 'react-testing-library';
+import 'jest-dom/extend-expect';
 import Controls from '../controls/Controls';
 import Display from '../display/Display';
 

@@ -6,8 +6,9 @@
 
 import React from 'react';
 import * as rt from 'react-testing-library';
-import Controls from './Controls';
 import 'jest-dom/extend-expect';
+import Controls from './Controls';
+
 afterEach(rt.cleanup);
 
 describe('Controls Component', () => {
