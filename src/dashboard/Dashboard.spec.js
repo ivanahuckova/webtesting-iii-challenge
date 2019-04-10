@@ -1,6 +1,6 @@
 // DASHBOARD: shows the controls and display
 // GATE: defaults to unlocked and open
-//GATE: cannot be closed or opened if it is locked
+// GATE: cannot be closed or opened if it is locked
 
 import React from 'react';
 import * as rt from 'react-testing-library';
@@ -9,7 +9,7 @@ import Display from '../display/Display';
 
 afterEach(rt.cleanup);
 
-describe('Dashboard', () => {
+describe('Dashboard Component', () => {
   it('shows display', () => {
     const wrap = rt.render(<Display />);
     wrap.getByTestId(/displayCont/i);
@@ -18,6 +18,9 @@ describe('Dashboard', () => {
     const wrap = rt.render(<Controls />);
     wrap.getByTestId(/controlsCont/i);
   });
+});
+
+describe('Gate functionality', () => {
   it('gate default is unlocked', () => {
     const wrap = rt.render(<Display />);
     wrap.getByText(/unlocked/i);
