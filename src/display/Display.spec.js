@@ -1,15 +1,16 @@
-// DISPLAY:
-// it displays if gate is open/closed and if it is locked/unlocked
-// it displays 'Closed' if the closed prop is true and 'Open' if otherwise
-// it displays 'Locked' if the locked prop is true and 'Unlocked' if otherwise
-// when locked or closed use the red-led class
-// when unlocked or open use the green-led class
 import React from 'react';
 import * as rt from 'react-testing-library';
 import 'jest-dom/extend-expect';
 import Display from './Display';
 
 afterEach(rt.cleanup);
+
+// DISPLAY - tests:
+// it displays if gate is open/closed and if it is locked/unlocked
+// it displays 'Closed' if the closed prop is true and 'Open' if otherwise
+// it displays 'Locked' if the locked prop is true and 'Unlocked' if otherwise
+// when locked or closed use the red-led class
+// when unlocked or open use the green-led class
 
 describe('Display Component', () => {
   it('displays if gate is open', () => {

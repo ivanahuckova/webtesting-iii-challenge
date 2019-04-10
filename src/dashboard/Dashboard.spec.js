@@ -1,7 +1,3 @@
-// DASHBOARD: shows the controls and display
-// GATE: defaults to unlocked and open
-// GATE: cannot be closed or opened if it is locked
-
 import React from 'react';
 import * as rt from 'react-testing-library';
 import 'jest-dom/extend-expect';
@@ -9,6 +5,9 @@ import Controls from '../controls/Controls';
 import Display from '../display/Display';
 
 afterEach(rt.cleanup);
+
+// DASHBOARD - tests:
+// shows the controls and display
 
 describe('Dashboard Component', () => {
   it('shows display', () => {
@@ -20,6 +19,10 @@ describe('Dashboard Component', () => {
     wrap.getByTestId(/controlsCont/i);
   });
 });
+
+// GATE - tests:
+// defaults to unlocked and open
+// cannot be closed or opened if it is locked
 
 describe('Gate functionality', () => {
   it('gate default is unlocked', () => {
